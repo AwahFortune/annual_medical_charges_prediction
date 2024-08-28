@@ -3,7 +3,6 @@ import numpy as np
 import pickle 
 import streamlit as st 
 from PIL import Image 
-import sklearn 
   
 # loading in the model to predict on the data 
 pickle_in = open('model.pkl', 'rb') 
