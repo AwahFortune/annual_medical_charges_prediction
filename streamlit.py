@@ -3,6 +3,7 @@ import numpy as np
 import pickle 
 import streamlit as st 
 from PIL import Image 
+import sklearn 
   
 # loading in the model to predict on the data 
 pickle_in = open('model.pkl', 'rb') 
@@ -36,8 +37,9 @@ def main():
     # the prediction function defined above is called to make the prediction  
     # and store it in the variable result 
     if st.button("Predict"): 
-        result = prediction(age) 
+        result = int(prediction(age).item())
     st.success(f'The annual charges of a non-smoker of age {age} is {result}') 
      
 if __name__=='__main__': 
     main() 
+    
