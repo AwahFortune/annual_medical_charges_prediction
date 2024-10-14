@@ -18,7 +18,6 @@ def predict():
 
 @app.route('/api', methods=['GET'])
 def base():
-    
     return jsonify({'message': "Welcome!"})
 
 if __name__ == '__main__':
